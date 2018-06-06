@@ -1,9 +1,10 @@
 ﻿@page
-@model AboutModel
+@using Constants
+@model RazorPagesMovie.Pages.AboutModel
 @{
-    ViewData["Title"] = "About";
+    ViewData[ViewDataKeys.TITLE] = "About";
 }
-<h2>@ViewData["Title"]</h2>
+<h2>@ViewData[ViewDataKeys.TITLE]</h2>
 <h3>@Model.Message</h3>
 
 <p>Use this area to provide additional information.</p>

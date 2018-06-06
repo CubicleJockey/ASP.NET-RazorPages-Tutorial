@@ -1,9 +1,10 @@
 ﻿@page
-@model ContactModel
+@using Constants
+@model RazorPagesMovie.Pages.ContactModel
 @{
-    ViewData["Title"] = "Contact";
+    ViewData[ViewDataKeys.TITLE] = "Contact";
 }
-<h2>@ViewData["Title"]</h2>
+<h2>@ViewData[ViewDataKeys.TITLE]</h2>
 <h3>@Model.Message</h3>
 
 <address>
