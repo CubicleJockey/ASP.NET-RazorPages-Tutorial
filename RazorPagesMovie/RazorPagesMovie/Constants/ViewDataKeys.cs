@@ -2,6 +2,6 @@
 {
     public static class ViewDataKeys
     {
-        public static string TITLE = "Title";
+        public static string Title = nameof(Title);
     }
 }
