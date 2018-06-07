@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RazorPagesMovie.Pages.Movie
 {
-    public class IndexModel : BasePageContext
+    public class IndexModel : BaseMovieContext
     {
         public IndexModel(RazorPagesMovieContext context) 
             : base(context) { }

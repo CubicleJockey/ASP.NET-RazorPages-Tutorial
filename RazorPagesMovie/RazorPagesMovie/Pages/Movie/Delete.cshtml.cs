@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RazorPagesMovie.Pages.Movie
 {
-    public class DeleteModel : BasePageContext
+    public class DeleteModel : BaseMovieContext
     {
 
         public DeleteModel(RazorPagesMovieContext context) 

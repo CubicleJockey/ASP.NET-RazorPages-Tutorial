@@ -1,11 +1,10 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
 using RazorPagesMovie.EF;
+using System.Threading.Tasks;
 
 namespace RazorPagesMovie.Pages.Movie
 {
-    public class CreateModel : BasePageContext
+    public class CreateModel : BaseMovieContext
     {
 
         /// <inheritdoc />

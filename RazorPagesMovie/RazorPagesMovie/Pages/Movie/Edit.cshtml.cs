@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RazorPagesMovie.Pages.Movie
 {
-    public class EditModel : BasePageContext
+    public class EditModel : BaseMovieContext
     {
         public EditModel(RazorPagesMovieContext context) 
             : base(context){}

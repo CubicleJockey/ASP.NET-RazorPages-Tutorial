@@ -8,11 +8,11 @@ using RazorPagesMovie.Pages.Movie;
 namespace RazorPagesMovie.Tests.Pages.Movie
 {
     [TestClass]
-    public class BasePageContextTests
+    public class BaseMovieContextTests
     {
         private readonly MockBasePageContext fakeBasePageContext;
 
-        public BasePageContextTests()
+        public BaseMovieContextTests()
         {
             fakeBasePageContext = new MockBasePageContext();
         }
@@ -29,7 +29,7 @@ namespace RazorPagesMovie.Tests.Pages.Movie
             fakeBasePageContext.IsContextSet.Should().BeTrue();
         }
 
-        private class MockBasePageContext : BasePageContext
+        private class MockBasePageContext : BaseMovieContext
         {
             public MockBasePageContext() 
                 : base(new RazorPagesMovieContext(new DbContextOptions<RazorPagesMovieContext>())) { }

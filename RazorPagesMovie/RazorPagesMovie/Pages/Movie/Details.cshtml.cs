@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RazorPagesMovie.Pages.Movie
 {
-    public class DetailsModel : BasePageContext
+    public class DetailsModel : BaseMovieContext
     {
         public DetailsModel(RazorPagesMovieContext context) 
             : base(context) { }
