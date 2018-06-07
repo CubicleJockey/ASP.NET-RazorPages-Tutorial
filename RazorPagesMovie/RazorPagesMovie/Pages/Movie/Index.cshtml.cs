@@ -3,6 +3,7 @@ using RazorPagesMovie.EF;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RazorPagesMovie.Pages.Movie
 {
@@ -12,16 +13,28 @@ namespace RazorPagesMovie.Pages.Movie
             : base(context) { }
 
         public IEnumerable<Domain.Movie> Movies { get;set; }
+        public SelectList Genres { get; set; }
+        public string MovieGenre { get; set; }
 
-        public async Task OnGetAsync(string searchString)
+        public async Task OnGetAsync(string movieGenre, string searchString)
         {
+            var genres = Context.Movies.OrderBy(movie => movie.Genre)
+                                       .Select(movie => movie.Genre)
+                                       .Distinct();
+
             var movies = Context.Movies.Select(movie => movie);
             if (!string.IsNullOrWhiteSpace(searchString))
             {
                 movies = movies.Where(movie => movie.Title.Contains(searchString));
             }
 
-            Movies = await movies.ToListAsync();
+            if (!string.IsNullOrWhiteSpace(movieGenre))
+            {
+                movies = movies.Where(movie => movie.Genre == movieGenre);
+            }
+
+            Genres = new SelectList(await genres.ToArrayAsync());
+            Movies = await movies.ToArrayAsync();
         }
     }
 }

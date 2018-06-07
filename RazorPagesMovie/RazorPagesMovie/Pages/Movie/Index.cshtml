@@ -1,8 +1,4 @@
-﻿@page "{searchString?}"
-<!--
-The preceding route constraint allows searching the title as route data (a URL segment) instead of as a query string value.
-The ? in "{searchTile?}" means this is an optional route parameter.
--->
+﻿@page
 @using Constants
 @model RazorPagesMovie.Pages.Movie.IndexModel
 
@@ -18,8 +14,12 @@ The ? in "{searchTile?}" means this is an optional route parameter.
 
 <form>
     <p>
+        <select asp-for="Mov" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+
         Title: <input type="text" name="searchString">
-        <input type="submit" value="Filter" />
+        <input type="submit" value="Filter"/>
     </p>
 </form>
 
