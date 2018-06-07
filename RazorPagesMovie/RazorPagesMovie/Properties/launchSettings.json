@@ -1,12 +1,13 @@
-﻿{
+{
   "profiles": {
     "RazorPagesMovie": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:9001;http://localhost:9000",
+      "launchUrl": "Movie",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:9001;http://localhost:9000"
     }
   }
 }

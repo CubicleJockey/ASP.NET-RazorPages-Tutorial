@@ -1,4 +1,9 @@
-﻿@page
+﻿@page "{id:int}"
+<!--
+A request to the page with the "{id:int}" route template that does not include the integer will return an HTTP 404 (not found) error.
+For example, http://localhost:5000/Movies/Edit will return a 404 error. To make the ID optional, append ? to the route constraint:
+-->
+
 @using Constants
 @using RazorPagesMovie.Domain
 @model RazorPagesMovie.Pages.Movie.EditModel
