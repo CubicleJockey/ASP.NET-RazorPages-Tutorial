@@ -10,7 +10,6 @@ namespace RazorPagesMovie.EF.Migrations
 
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            
             migrationBuilder.CreateTable(
                 name: MOVIES,
                 columns: table => new
@@ -30,8 +29,7 @@ namespace RazorPagesMovie.EF.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: MOVIES);
+            migrationBuilder.DropTable(name: MOVIES);
         }
     }
 }

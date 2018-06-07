@@ -33,7 +33,7 @@ namespace RazorPagesMovie.Pages.Movie
                 movies = movies.Where(movie => movie.Genre == movieGenre);
             }
 
-            Genres = new SelectList(await genres.ToArrayAsync());
+            Genres = new SelectList(await genres?.ToArrayAsync());
             Movies = await movies.ToArrayAsync();
         }
     }
