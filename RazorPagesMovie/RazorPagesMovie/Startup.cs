@@ -2,10 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using RazorPagesMovie;
 using RazorPagesMovie.EF;
 
 namespace RazorPagesMovie
@@ -33,7 +32,9 @@ namespace RazorPagesMovie
                     .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<RazorPagesMovieContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString(nameof(RazorPagesMovieContext))));
+                {
+                    options.UseSqlServer(Configuration.GetConnectionString(nameof(RazorPagesMovieContext)));
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

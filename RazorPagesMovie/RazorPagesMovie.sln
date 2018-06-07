@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{FC9557EB-76F4-4D63-B5A5-932827E4F2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{FC9557EB-76F4-4D63-B5A5-932827E4F2F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A230FCE4-B3D9-4521-97CC-07EB370A3C14}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.Tests", "RazorPagesMovie.Tests\RazorPagesMovie.Tests.csproj", "{573ECA87-2145-45C1-8D47-6CEE9C9F9244}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.Domain", "RazorPagesMovie.Domain\RazorPagesMovie.Domain.csproj", "{3EA6EB62-BE94-49B9-81A6-05078DDF51C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie.Tests", "RazorPagesMovie.Tests\RazorPagesMovie.Tests.csproj", "{573ECA87-2145-45C1-8D47-6CEE9C9F9244}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{E0FF3B6E-69C1-4A08-86CA-6F50A70A1445}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C75A2C39-D7CB-40DF-8869-65B64FFFC68D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.EF", "RazorPagesMovie.EF\RazorPagesMovie.EF.csproj", "{18185D2C-7656-41DE-85B7-C77E5D2A3E3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie.Domain", "RazorPagesMovie.Domain\RazorPagesMovie.Domain.csproj", "{E18621C7-452E-40A1-814E-871C8B5CE999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMovie.EF", "RazorPagesMovie.EF\RazorPagesMovie.EF.csproj", "{7E882D07-3378-48CB-8746-6565F2B38E61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{573ECA87-2145-45C1-8D47-6CEE9C9F9244}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{573ECA87-2145-45C1-8D47-6CEE9C9F9244}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{573ECA87-2145-45C1-8D47-6CEE9C9F9244}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EA6EB62-BE94-49B9-81A6-05078DDF51C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EA6EB62-BE94-49B9-81A6-05078DDF51C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EA6EB62-BE94-49B9-81A6-05078DDF51C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EA6EB62-BE94-49B9-81A6-05078DDF51C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18185D2C-7656-41DE-85B7-C77E5D2A3E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18185D2C-7656-41DE-85B7-C77E5D2A3E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18185D2C-7656-41DE-85B7-C77E5D2A3E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18185D2C-7656-41DE-85B7-C77E5D2A3E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E18621C7-452E-40A1-814E-871C8B5CE999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E18621C7-452E-40A1-814E-871C8B5CE999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E18621C7-452E-40A1-814E-871C8B5CE999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E18621C7-452E-40A1-814E-871C8B5CE999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E882D07-3378-48CB-8746-6565F2B38E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E882D07-3378-48CB-8746-6565F2B38E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E882D07-3378-48CB-8746-6565F2B38E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E882D07-3378-48CB-8746-6565F2B38E61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,8 +52,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FC9557EB-76F4-4D63-B5A5-932827E4F2F6} = {E0FF3B6E-69C1-4A08-86CA-6F50A70A1445}
 		{573ECA87-2145-45C1-8D47-6CEE9C9F9244} = {C75A2C39-D7CB-40DF-8869-65B64FFFC68D}
-		{3EA6EB62-BE94-49B9-81A6-05078DDF51C3} = {E0FF3B6E-69C1-4A08-86CA-6F50A70A1445}
-		{18185D2C-7656-41DE-85B7-C77E5D2A3E3B} = {E0FF3B6E-69C1-4A08-86CA-6F50A70A1445}
+		{E18621C7-452E-40A1-814E-871C8B5CE999} = {E0FF3B6E-69C1-4A08-86CA-6F50A70A1445}
+		{7E882D07-3378-48CB-8746-6565F2B38E61} = {E0FF3B6E-69C1-4A08-86CA-6F50A70A1445}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8D36826-FEE8-4398-ADED-FF29C565233B}

@@ -21,7 +21,7 @@ namespace RazorPagesMovie.Pages.Movie
                 return NotFound();
             }
 
-            Movie = await Context.Movie.FirstOrDefaultAsync(m => m.Id == id);
+            Movie = await Context.Movies.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Movie == null)
             {
@@ -39,10 +39,10 @@ namespace RazorPagesMovie.Pages.Movie
                 return NotFound();
             }
 
-            Movie = await Context.Movie.FindAsync(id);
+            Movie = await Context.Movies.FindAsync(id);
 
             if (Movie == null) { return RedirectToPage(INDEX); }
-            Context.Movie.Remove(Movie);
+            Context.Movies.Remove(Movie);
             await Context.SaveChangesAsync();
 
             return RedirectToPage(INDEX);

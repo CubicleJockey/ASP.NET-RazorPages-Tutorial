@@ -14,7 +14,7 @@ namespace RazorPagesMovie.Pages.Movie
 
         public async Task OnGetAsync()
         {
-            Movies = await Context.Movie.ToListAsync();
+            Movies = await Context.Movies.ToListAsync();
         }
     }
 }

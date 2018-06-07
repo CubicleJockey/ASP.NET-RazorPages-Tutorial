@@ -27,7 +27,7 @@ namespace RazorPagesMovie.Pages.Movie
                 return Page();
             }
 
-            Context.Movie.Add(Movie);
+            Context.Movies.Add(Movie);
             await Context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

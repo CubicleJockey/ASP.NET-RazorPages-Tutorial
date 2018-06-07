@@ -21,7 +21,7 @@ namespace RazorPagesMovie.Pages.Movie
                 return NotFound();
             }
 
-            Movie = await Context.Movie.FirstOrDefaultAsync(m => m.Id == id);
+            Movie = await Context.Movies.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Movie == null)
             {
@@ -57,7 +57,7 @@ namespace RazorPagesMovie.Pages.Movie
 
         private bool MovieExists(int id)
         {
-            return Context.Movie.Any(e => e.Id == id);
+            return Context.Movies.Any(e => e.Id == id);
         }
     }
 }
