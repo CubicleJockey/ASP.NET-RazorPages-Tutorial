@@ -7,17 +7,32 @@ namespace RazorPagesMovie.Domain
 {
     public class Movie
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
+        private const string REGEX = @"^[A-Z]+[a-zA-Z""'\s-]*$";
 
-        [DisplayName("Release Date")]
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(60, MinimumLength = 2)]
+        public string Title { get; set; }
+        
         [DataType(DataType.Date)]
+        [DisplayName("Release Date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseDate { get; set; }
+
+        [Required]
+        [StringLength(30)]
+        [RegularExpression(REGEX)]
         public string Genre { get; set; }
 
-        //data annotation is required so Entity Framework Core can correctly map Price to currency in the database.
-        [Column(TypeName = "decimal(18, 2)")]
+        [Range(1, 100)]
+        [DataType(DataType.Currency)]
+        [Column(TypeName = "decimal(18, 2)")] //data annotation is required so Entity Framework Core can correctly map Price to currency in the database.
         public decimal Price { get; set; }
+        
+        [Required]
+        [StringLength(5)]
+        [RegularExpression(REGEX)]
         public string Rating { get; set; }
     }
 }
