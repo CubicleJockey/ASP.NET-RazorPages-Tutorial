@@ -30,24 +30,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Movies) {
+@foreach (var movie in Model.Movies) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => movie.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
+                @Html.DisplayFor(modelItem => movie.ReleaseDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Genre)
+                @Html.DisplayFor(modelItem => movie.Genre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => movie.Price)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@movie.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@movie.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@movie.Id">Delete</a>
             </td>
         </tr>
 }
