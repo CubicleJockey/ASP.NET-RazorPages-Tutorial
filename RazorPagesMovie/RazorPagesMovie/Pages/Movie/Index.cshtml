@@ -1,4 +1,8 @@
-﻿@page
+﻿@page "{searchString?}"
+<!--
+The preceding route constraint allows searching the title as route data (a URL segment) instead of as a query string value.
+The ? in "{searchTile?}" means this is an optional route parameter.
+-->
 @using Constants
 @model RazorPagesMovie.Pages.Movie.IndexModel
 
@@ -11,6 +15,14 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form>
+    <p>
+        Title: <input type="text" name="searchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -30,26 +42,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var movie in Model.Movies) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => movie.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => movie.ReleaseDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => movie.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => movie.Price)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@movie.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@movie.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@movie.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => movie.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => movie.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => movie.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => movie.Price)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@movie.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@movie.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@movie.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
